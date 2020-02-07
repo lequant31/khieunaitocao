@@ -1,6 +1,6 @@
 ﻿namespace khieunaitocao
 {
-    partial class quanlythongtin
+    partial class Quanlythongtin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(quanlythongtin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Quanlythongtin));
             DevExpress.XtraCharts.Series series1 = new DevExpress.XtraCharts.Series();
             DevExpress.XtraCharts.PieSeriesView pieSeriesView1 = new DevExpress.XtraCharts.PieSeriesView();
             DevExpress.XtraCharts.ChartTitle chartTitle1 = new DevExpress.XtraCharts.ChartTitle();
@@ -174,7 +174,7 @@
             this.xtraTabControl1.TabIndex = 4;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.pageMain});
-            this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.xtraTabControl1_CloseButtonClick);
+            this.xtraTabControl1.CloseButtonClick += new System.EventHandler(this.XtraTabControl1_CloseButtonClick);
             // 
             // pageMain
             // 
@@ -240,7 +240,7 @@
             this.date_tungay.Properties.NullText = "Từ ngày";
             this.date_tungay.Size = new System.Drawing.Size(99, 20);
             this.date_tungay.TabIndex = 1;
-            this.date_tungay.EditValueChanged += new System.EventHandler(this.date_tungay_EditValueChanged);
+            this.date_tungay.EditValueChanged += new System.EventHandler(this.Date_tungay_EditValueChanged);
             // 
             // ribbon
             // 
@@ -290,7 +290,7 @@
             this.bar_giaiquyetkhieunai.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_giaiquyetkhieunai.ImageOptions.Image")));
             this.bar_giaiquyetkhieunai.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_giaiquyetkhieunai.ImageOptions.LargeImage")));
             this.bar_giaiquyetkhieunai.Name = "bar_giaiquyetkhieunai";
-            this.bar_giaiquyetkhieunai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_giaiquyetkhieunai_ItemClick);
+            this.bar_giaiquyetkhieunai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_giaiquyetkhieunai_ItemClick);
             // 
             // bar_thongtintocao
             // 
@@ -298,7 +298,7 @@
             this.bar_thongtintocao.Id = 5;
             this.bar_thongtintocao.ImageOptions.LargeImage = global::khieunaitocao.Properties.Resources.Mail_icon__2_;
             this.bar_thongtintocao.Name = "bar_thongtintocao";
-            this.bar_thongtintocao.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_thongtintocao_ItemClick);
+            this.bar_thongtintocao.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_thongtintocao_ItemClick);
             // 
             // bar_quatrinhgiaiquyettocao
             // 
@@ -307,7 +307,7 @@
             this.bar_quatrinhgiaiquyettocao.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_quatrinhgiaiquyettocao.ImageOptions.Image")));
             this.bar_quatrinhgiaiquyettocao.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_quatrinhgiaiquyettocao.ImageOptions.LargeImage")));
             this.bar_quatrinhgiaiquyettocao.Name = "bar_quatrinhgiaiquyettocao";
-            this.bar_quatrinhgiaiquyettocao.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_quatrinhgiaiquyettocao_ItemClick);
+            this.bar_quatrinhgiaiquyettocao.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_quatrinhgiaiquyettocao_ItemClick);
             // 
             // skinRibbonGalleryBarItem3
             // 
@@ -322,7 +322,7 @@
             this.bar_thongtincanbo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_thongtincanbo.ImageOptions.Image")));
             this.bar_thongtincanbo.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_thongtincanbo.ImageOptions.LargeImage")));
             this.bar_thongtincanbo.Name = "bar_thongtincanbo";
-            this.bar_thongtincanbo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_thongtincanbo_ItemClick);
+            this.bar_thongtincanbo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_thongtincanbo_ItemClick);
             // 
             // btn_thaydoimatkhau
             // 
@@ -331,7 +331,7 @@
             this.btn_thaydoimatkhau.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_thaydoimatkhau.ImageOptions.Image")));
             this.btn_thaydoimatkhau.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btn_thaydoimatkhau.ImageOptions.LargeImage")));
             this.btn_thaydoimatkhau.Name = "btn_thaydoimatkhau";
-            this.btn_thaydoimatkhau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_thaydoimatkhau_ItemClick);
+            this.btn_thaydoimatkhau.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_thaydoimatkhau_ItemClick);
             // 
             // barButtonItem1
             // 
@@ -346,7 +346,7 @@
             this.bar_thongke_khieunai.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_thongke_khieunai.ImageOptions.Image")));
             this.bar_thongke_khieunai.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_thongke_khieunai.ImageOptions.LargeImage")));
             this.bar_thongke_khieunai.Name = "bar_thongke_khieunai";
-            this.bar_thongke_khieunai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_thongke_khieunai_ItemClick);
+            this.bar_thongke_khieunai.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_thongke_khieunai_ItemClick);
             // 
             // bar_thongtindonthu
             // 
@@ -355,7 +355,7 @@
             this.bar_thongtindonthu.ImageOptions.LargeImage = global::khieunaitocao.Properties.Resources.Mail_icon__2_;
             this.bar_thongtindonthu.Name = "bar_thongtindonthu";
             this.bar_thongtindonthu.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            this.bar_thongtindonthu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_thongtindonthu_ItemClick);
+            this.bar_thongtindonthu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_thongtindonthu_ItemClick);
             // 
             // barButtonItem2
             // 
@@ -382,7 +382,7 @@
             this.bar_thongketocao.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_thongketocao.ImageOptions.Image")));
             this.bar_thongketocao.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_thongketocao.ImageOptions.LargeImage")));
             this.bar_thongketocao.Name = "bar_thongketocao";
-            this.bar_thongketocao.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_thongketocao_ItemClick);
+            this.bar_thongketocao.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_thongketocao_ItemClick);
             // 
             // ribbonPage1
             // 
@@ -484,7 +484,7 @@
             this.date_denngay.Properties.TodayDate = new System.DateTime(2019, 2, 18, 0, 0, 0, 0);
             this.date_denngay.Size = new System.Drawing.Size(99, 20);
             this.date_denngay.TabIndex = 2;
-            this.date_denngay.EditValueChanged += new System.EventHandler(this.date_denngay_EditValueChanged);
+            this.date_denngay.EditValueChanged += new System.EventHandler(this.Date_denngay_EditValueChanged);
             // 
             // chartControl1
             // 
@@ -529,7 +529,7 @@
             "2030"});
             this.cmb_nam_khieunai.Size = new System.Drawing.Size(72, 20);
             this.cmb_nam_khieunai.TabIndex = 1;
-            this.cmb_nam_khieunai.EditValueChanged += new System.EventHandler(this.cmb_nam_khieunai_EditValueChanged);
+            this.cmb_nam_khieunai.EditValueChanged += new System.EventHandler(this.Cmb_nam_khieunai_EditValueChanged);
             // 
             // bieudocot_khieunai
             // 
@@ -616,7 +616,7 @@
             this.date_tungay_tocao.Properties.NullText = "Từ ngày";
             this.date_tungay_tocao.Size = new System.Drawing.Size(99, 20);
             this.date_tungay_tocao.TabIndex = 3;
-            this.date_tungay_tocao.EditValueChanged += new System.EventHandler(this.date_tungay_tocao_EditValueChanged);
+            this.date_tungay_tocao.EditValueChanged += new System.EventHandler(this.Date_tungay_tocao_EditValueChanged);
             // 
             // date_denngay_tocao
             // 
@@ -633,7 +633,7 @@
             this.date_denngay_tocao.Properties.TodayDate = new System.DateTime(2019, 2, 18, 0, 0, 0, 0);
             this.date_denngay_tocao.Size = new System.Drawing.Size(99, 20);
             this.date_denngay_tocao.TabIndex = 4;
-            this.date_denngay_tocao.EditValueChanged += new System.EventHandler(this.date_denngay_tocao_EditValueChanged);
+            this.date_denngay_tocao.EditValueChanged += new System.EventHandler(this.Date_denngay_tocao_EditValueChanged);
             // 
             // chartControl2
             // 
@@ -688,7 +688,7 @@
             "2030"});
             this.cmb_chonnam_tocao.Size = new System.Drawing.Size(80, 20);
             this.cmb_chonnam_tocao.TabIndex = 1;
-            this.cmb_chonnam_tocao.EditValueChanged += new System.EventHandler(this.cmb_chonnam_tocao_EditValueChanged);
+            this.cmb_chonnam_tocao.EditValueChanged += new System.EventHandler(this.Cmb_chonnam_tocao_EditValueChanged);
             // 
             // bieudocot_tocao
             // 
@@ -854,8 +854,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý thông tin";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.quanlythongtin_FormClosing);
-            this.Load += new System.EventHandler(this.quanlythongtin_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Quanlythongtin_FormClosing);
+            this.Load += new System.EventHandler(this.Quanlythongtin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();

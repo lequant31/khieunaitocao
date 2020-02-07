@@ -1,6 +1,6 @@
 ﻿namespace khieunaitocao
 {
-    partial class ctl_quatrinhgiaiquyetkhieunai
+    partial class Ctl_quatrinhgiaiquyetkhieunai
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctl_quatrinhgiaiquyetkhieunai));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ctl_quatrinhgiaiquyetkhieunai));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.bar_them = new DevExpress.XtraBars.BarButtonItem();
@@ -121,7 +121,7 @@
             this.bar_them.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_them.ImageOptions.Image")));
             this.bar_them.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_them.ImageOptions.LargeImage")));
             this.bar_them.Name = "bar_them";
-            this.bar_them.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_them_ItemClick);
+            this.bar_them.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_them_ItemClick);
             // 
             // bar_sua
             // 
@@ -130,7 +130,7 @@
             this.bar_sua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_sua.ImageOptions.Image")));
             this.bar_sua.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_sua.ImageOptions.LargeImage")));
             this.bar_sua.Name = "bar_sua";
-            this.bar_sua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_sua_ItemClick);
+            this.bar_sua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_sua_ItemClick);
             // 
             // bar_lammoi
             // 
@@ -139,7 +139,7 @@
             this.bar_lammoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_lammoi.ImageOptions.Image")));
             this.bar_lammoi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_lammoi.ImageOptions.LargeImage")));
             this.bar_lammoi.Name = "bar_lammoi";
-            this.bar_lammoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_lammoi_ItemClick);
+            this.bar_lammoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_lammoi_ItemClick);
             // 
             // bar_xoa
             // 
@@ -148,7 +148,7 @@
             this.bar_xoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_xoa.ImageOptions.Image")));
             this.bar_xoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_xoa.ImageOptions.LargeImage")));
             this.bar_xoa.Name = "bar_xoa";
-            this.bar_xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_xoa_ItemClick);
+            this.bar_xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_xoa_ItemClick);
             // 
             // bar_chuyendonvikhac
             // 
@@ -157,7 +157,7 @@
             this.bar_chuyendonvikhac.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_chuyendonvikhac.ImageOptions.Image")));
             this.bar_chuyendonvikhac.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_chuyendonvikhac.ImageOptions.LargeImage")));
             this.bar_chuyendonvikhac.Name = "bar_chuyendonvikhac";
-            this.bar_chuyendonvikhac.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_chuyendonvikhac_ItemClick);
+            this.bar_chuyendonvikhac.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_chuyendonvikhac_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -247,8 +247,8 @@
             this.grv_quatrinhgiaiquyet.OptionsView.ColumnAutoWidth = false;
             this.grv_quatrinhgiaiquyet.OptionsView.ShowAutoFilterRow = true;
             this.grv_quatrinhgiaiquyet.OptionsView.ShowFooter = true;
-            this.grv_quatrinhgiaiquyet.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.grv_quatrinhgiaiquyet_RowStyle);
-            this.grv_quatrinhgiaiquyet.DoubleClick += new System.EventHandler(this.grv_quatrinhgiaiquyet_DoubleClick);
+            this.grv_quatrinhgiaiquyet.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.Grv_quatrinhgiaiquyet_RowStyle);
+            this.grv_quatrinhgiaiquyet.DoubleClick += new System.EventHandler(this.Grv_quatrinhgiaiquyet_DoubleClick);
             // 
             // gridColumn1
             // 
@@ -451,7 +451,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "ctl_quatrinhgiaiquyetkhieunai";
             this.Size = new System.Drawing.Size(1254, 428);
-            this.Load += new System.EventHandler(this.ctl_quatrinhgiaiquyetkhieunai_Load);
+            this.Load += new System.EventHandler(this.Ctl_quatrinhgiaiquyetkhieunai_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);

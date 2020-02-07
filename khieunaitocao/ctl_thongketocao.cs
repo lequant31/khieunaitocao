@@ -7,33 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataAndSystem;
 
 namespace khieunaitocao
 {
     public partial class ctl_thongketocao : UserControl
     {
-        khieunaitocaoContextDataContext khieunaitocaoContextDataContext;
+        khieunaitocaoEntities _khieunaitocaoEntities;
         public ctl_thongketocao()
         {
             InitializeComponent();
         }
-        private void fun_load()
+        private void Fun_load()
         {
-            using (khieunaitocaoContextDataContext = new khieunaitocaoContextDataContext())
+            using (_khieunaitocaoEntities = new khieunaitocaoEntities())
             {
-                var list = khieunaitocaoContextDataContext.thongketonghop_tocao(date_tungay.DateTime, date_denngay.DateTime, dinhdanh.madonvi).ToList();
+                var list = _khieunaitocaoEntities.thongketonghop_tocao(date_tungay.DateTime, date_denngay.DateTime, Dinhdanh.madonvi).ToList();
                 grc_thongketocao.DataSource = list;
             }
         }
 
-        private void date_tungay_EditValueChanged(object sender, EventArgs e)
+        private void Date_tungay_EditValueChanged(object sender, EventArgs e)
         {
-            fun_load();
+            Fun_load();
         }
 
-        private void date_denngay_EditValueChanged(object sender, EventArgs e)
+        private void Date_denngay_EditValueChanged(object sender, EventArgs e)
         {
-            fun_load();
+            Fun_load();
         }
     }
 

@@ -8,47 +8,48 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DataAndSystem;
 
 namespace khieunaitocao
 {
-    public partial class ctlthongtintocao : DevExpress.XtraEditors.XtraUserControl
+    public partial class Ctlthongtintocao : DevExpress.XtraEditors.XtraUserControl
     {
-        public ctlthongtintocao()
+        public Ctlthongtintocao()
         {
             InitializeComponent();
         }
         khieunaitocaoContextDataContext _khieunaitocaoContext;
-        private void tocao_load()
+        private void Tocao_load()
         {
             using (_khieunaitocaoContext = new khieunaitocaoContextDataContext())
             {
-                var _list = _khieunaitocaoContext.list_thongtintocao_linq(dinhdanh.madonvi).ToList();
+                var _list = _khieunaitocaoContext.list_thongtintocao_linq(Dinhdanh.madonvi).ToList();
 
                 grd_thongtintocao.DataSource = _list;                
             }
 
         }
-        private void bar_them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            form_thongtintocao f = new form_thongtintocao();
+            Form_thongtintocao f = new Form_thongtintocao();
             f.ShowDialog();
         }
 
-        private void ctlthongtintocao_Load(object sender, EventArgs e)
+        private void Ctlthongtintocao_Load(object sender, EventArgs e)
         {
-            tocao_load();
+            Tocao_load();
         }
 
-        private void bar_lammoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_lammoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            tocao_load();
+            Tocao_load();
         }
 
-        private void bar_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             int a = (int)grv_thongtintocao.GetFocusedRowCellValue("id_thongtintocao1");
             #region check permission
-            if (dinhdanh.quyenhan == 2)
+            if (Dinhdanh.quyenhan == 2)
             {
                 XtraMessageBox.Show("Tài khoản chỉ có quyền xem.\n Không được phép xóa");
                 return;
@@ -90,10 +91,12 @@ namespace khieunaitocao
             }
         }
 
-        private void bar_sua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_sua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-             form_thongtintocao f = new form_thongtintocao();
-            f.bool_sua = true;
+            Form_thongtintocao f = new Form_thongtintocao
+            {
+                bool_sua = true
+            };
             try
             {
                 var y =grv_thongtintocao.GetFocusedRowCellValue("id_thongtintocao1");
@@ -107,10 +110,12 @@ namespace khieunaitocao
             }
         }
 
-        private void grv_thongtintocao_DoubleClick(object sender, EventArgs e)
+        private void Grv_thongtintocao_DoubleClick(object sender, EventArgs e)
         {
-            form_thongtintocao f = new form_thongtintocao();
-            f.bool_sua = true;
+            Form_thongtintocao f = new Form_thongtintocao
+            {
+                bool_sua = true
+            };
             try
             {
                 int i = (int)grv_thongtintocao.GetFocusedRowCellValue("id_thongtintocao1");

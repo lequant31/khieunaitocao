@@ -15,18 +15,19 @@ using System.Data.Linq.SqlClient;
 using DevExpress.XtraCharts;
 using System.Collections;
 using DevExpress.XtraEditors;
+using DataAndSystem;
 
 namespace khieunaitocao
 {
-    public partial class quanlythongtin : DevExpress.XtraBars.Ribbon.RibbonForm
+    public partial class Quanlythongtin : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         int tabPageIndex = 0;
 
-        public quanlythongtin()
+        public Quanlythongtin()
         {
             InitializeComponent();
         }
-        bool notTabExist(string tabName)
+        bool NotTabExist(string tabName)
         {
             for (int i = 0; i < xtraTabControl1.TabPages.Count; i++)
             {
@@ -49,14 +50,16 @@ namespace khieunaitocao
         {
             try
             {
-                if (notTabExist(tabName))
+                if (NotTabExist(tabName))
                 {
                     ctl.Dock = DockStyle.Fill;
-                    DevExpress.XtraTab.XtraTabPage xtra = new DevExpress.XtraTab.XtraTabPage();
-                    xtra.Text = tabName;
-                    xtra.Controls.Add(ctl);
-                    xtra.Padding = new System.Windows.Forms.Padding(2);
-                    xtraTabControl1.TabPages.Add(xtra);
+                    using (DevExpress.XtraTab.XtraTabPage xtra = new DevExpress.XtraTab.XtraTabPage())
+                    {
+                        xtra.Text = tabName;
+                        xtra.Controls.Add(ctl);
+                        xtra.Padding = new System.Windows.Forms.Padding(2);
+                        xtraTabControl1.TabPages.Add(xtra);
+                    }
                 }
 
                 tabPageIndex = TabPageIndex(tabName);
@@ -81,7 +84,7 @@ namespace khieunaitocao
             }
 
         }
-        private void xtraTabControl1_CloseButtonClick(object sender, EventArgs e)
+        private void XtraTabControl1_CloseButtonClick(object sender, EventArgs e)
         {
              try
             {
@@ -100,48 +103,48 @@ namespace khieunaitocao
             catch { XtraMessageBox.Show("Có lỗi xảy ra"); }
         }
 
-        private void bar_giaiquyetkhieunai_ItemClick(object sender, ItemClickEventArgs e)
+        private void Bar_giaiquyetkhieunai_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LoadForm(new ctl_quatrinhgiaiquyetkhieunai(),"Quá trình giải quyết khiếu nại");
+            LoadForm(new Ctl_quatrinhgiaiquyetkhieunai(),"Quá trình giải quyết khiếu nại");
         }
 
-        private void bar_thongtintocao_ItemClick(object sender, ItemClickEventArgs e)
+        private void Bar_thongtintocao_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LoadForm(new ctlthongtintocao(),"Thông tin đơn thư tố cáo");
+            LoadForm(new Ctlthongtintocao(),"Thông tin đơn thư tố cáo");
         }
 
-        private void bar_quatrinhgiaiquyettocao_ItemClick(object sender, ItemClickEventArgs e)
+        private void Bar_quatrinhgiaiquyettocao_ItemClick(object sender, ItemClickEventArgs e)
         {
             LoadForm(new ctlquatrinhgiaiquyettocao(), "Quá trình giải quyết tố cáo");
         }
 
-        private void bar_thongtincanbo_ItemClick(object sender, ItemClickEventArgs e)
+        private void Bar_thongtincanbo_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LoadForm(new ctl_quanlycanbo(), "Thông tin cán bộ");
+            LoadForm(new Ctl_quanlycanbo(), "Thông tin cán bộ");
         }
 
-        private void btn_thaydoimatkhau_ItemClick(object sender, ItemClickEventArgs e)
+        private void Btn_thaydoimatkhau_ItemClick(object sender, ItemClickEventArgs e)
         {
             form_thaydoimatkhau f = new form_thaydoimatkhau();
             f.ShowDialog();
         }
 
-        private void quanlythongtin_Load(object sender, EventArgs e)
+        private void Quanlythongtin_Load(object sender, EventArgs e)
         {
             UserLookAndFeel.Default.SkinName = Properties.Settings.Default.skin;
-            barStaticItem1.Caption = "Người dùng: " + dinhdanh.tencanbo;
-            barStaticItem2.Caption = "Số hiệu CAND: "+dinhdanh.sohieu_cand;
+            barStaticItem1.Caption = "Người dùng: " + Dinhdanh.tencanbo;
+            barStaticItem2.Caption = "Số hiệu CAND: "+Dinhdanh.sohieu_cand;
         }
 
-        private void quanlythongtin_FormClosing(object sender, FormClosingEventArgs e)
+        private void Quanlythongtin_FormClosing(object sender, FormClosingEventArgs e)
         {
             Properties.Settings.Default.skin = UserLookAndFeel.Default.SkinName;
             Properties.Settings.Default.Save();
         }
 
-        private void bar_thongtindonthu_ItemClick(object sender, ItemClickEventArgs e)
+        private void Bar_thongtindonthu_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LoadForm(new ctlmanagedonthu(), "Thông tin đơn thư khiếu nại");
+            LoadForm(new Ctlmanagedonthu(), "Thông tin đơn thư khiếu nại");
         }
 
         Thread thread1;
@@ -159,18 +162,20 @@ namespace khieunaitocao
                 {
                     var series1 = chartControl1.Series[0];
                     series1.Points.Clear();
-                    var _result = _khieunaitocaoContext.thongke_giaiquyetkhieunai(date_tungay.DateTime,date_denngay.DateTime,dinhdanh.madonvi).ToList();
+                    var _result = _khieunaitocaoContext.thongke_giaiquyetkhieunai(date_tungay.DateTime,date_denngay.DateTime,Dinhdanh.madonvi).ToList();
                     foreach (var item in _result)
                     {
-                        var point = new SeriesPoint();
-                        point.Argument = item.statuss;
-                        point.Tag = item.statuss;
-                        point.Values = new double[] { Convert.ToDouble(item.soluong) };
-                        series1.Points.Add(point);
+                        using (var point = new SeriesPoint())
+                        {
+                            point.Argument = item.statuss;
+                            point.Tag = item.statuss;
+                            point.Values = new double[] { Convert.ToDouble(item.soluong) };
+                            series1.Points.Add(point);
+                        }
                         series1.Label.TextPattern = "{A}: {VP:p0}";
                     }
 
-                   
+
                 }
                 catch
                 {
@@ -189,14 +194,16 @@ namespace khieunaitocao
                   
                     var series2 = chartControl2.Series[0];
                     series2.Points.Clear();
-                    var _result2 = _khieunaitocaoContext.thongke_giaiquyettocao(date_tungay_tocao.DateTime, date_denngay_tocao.DateTime, dinhdanh.madonvi).ToList();
+                    var _result2 = _khieunaitocaoContext.thongke_giaiquyettocao(date_tungay_tocao.DateTime, date_denngay_tocao.DateTime, Dinhdanh.madonvi).ToList();
                     foreach (var item in _result2)
                     {
-                        var point = new SeriesPoint();
-                        point.Argument = item.statuss;
-                        point.Tag = item.statuss;
-                        point.Values = new double[] { Convert.ToDouble(item.soluong) };
-                        series2.Points.Add(point);
+                        using (var point = new SeriesPoint())
+                        {
+                            point.Argument = item.statuss;
+                            point.Tag = item.statuss;
+                            point.Values = new double[] { Convert.ToDouble(item.soluong) };
+                            series2.Points.Add(point);
+                        }
                         series2.Label.TextPattern = "{A}: {VP:p0}";
                     }
                 }
@@ -212,19 +219,19 @@ namespace khieunaitocao
                 {
                     List<BieuDo> bieudo = new List<BieuDo>();
                     var db = new BieuDo();
-                    var _bieudo1 = _khieunaitocaoContext.bieudo_cot_donthukhieunai(dinhdanh.madonvi,Int16.Parse(cmb_nam_khieunai.Text)).ToList();
+                    var _bieudo1 = _khieunaitocaoContext.bieudo_cot_donthukhieunai(Dinhdanh.madonvi,Int16.Parse(cmb_nam_khieunai.Text)).ToList();
                     foreach (var item in _bieudo1)
                     {
-                        db.thang = item.thang;
-                        db.tong = item.tong;
+                        db.Thang = item.thang;
+                        db.Tong = item.tong;
                         bieudo.Add(db);
                     }
                     for (int i = 1; i < 13; i++)
                     {
                         if (_bieudo1.Count(p => p.thang == i) == 0)
                         {
-                            db.thang = i;
-                            db.tong = 0;
+                            db.Thang = i;
+                            db.Tong = 0;
                             bieudo.Add(db);
                         }
 
@@ -243,19 +250,19 @@ namespace khieunaitocao
                 {
                     List<BieuDo4> bieudo = new List<BieuDo4>();
                     var db = new BieuDo4();
-                    var _bieudo4 = _khieunaitocaoContext.bieudo_cot_donthutocao(dinhdanh.madonvi, Int16.Parse(cmb_nam_khieunai.Text)).ToList();
+                    var _bieudo4 = _khieunaitocaoContext.bieudo_cot_donthutocao(Dinhdanh.madonvi, Int16.Parse(cmb_nam_khieunai.Text)).ToList();
                     foreach (var item in _bieudo4)
                     {
-                        db.thang = item.thang;
-                        db.tong = item.tong;
+                        db.Thang = item.thang;
+                        db.Tong = item.tong;
                         bieudo.Add(db);
                     }
                     for (int i = 1; i < 13; i++)
                     {
                         if (_bieudo4.Count(p => p.thang == i) == 0)
                         {
-                            db.thang = i;
-                            db.tong = 0;
+                            db.Thang = i;
+                            db.Tong = 0;
                             bieudo.Add(db);
                         }
 
@@ -301,43 +308,43 @@ namespace khieunaitocao
         }
         struct BieuDo
         {
-            public int? tong { get; set; }
-            public int? thang { get; set; }
+            public int? Tong { get; set; }
+            public int? Thang { get; set; }
         }
         struct BieuDo4
         {
-            public int? tong { get; set; }
-            public int? thang { get; set; }
+            public int? Tong { get; set; }
+            public int? Thang { get; set; }
         }
-        private void date_tungay_EditValueChanged(object sender, EventArgs e)
+        private void Date_tungay_EditValueChanged(object sender, EventArgs e)
         {
             LoadData();
         }
-        private void date_denngay_EditValueChanged(object sender, EventArgs e)
+        private void Date_denngay_EditValueChanged(object sender, EventArgs e)
         {
             LoadData();
         }
-        private void date_tungay_tocao_EditValueChanged(object sender, EventArgs e)
+        private void Date_tungay_tocao_EditValueChanged(object sender, EventArgs e)
         {
             LoadData1();
         }
-        private void date_denngay_tocao_EditValueChanged(object sender, EventArgs e)
+        private void Date_denngay_tocao_EditValueChanged(object sender, EventArgs e)
         {
             LoadData1();
         }
-        private void bar_thongke_khieunai_ItemClick(object sender, ItemClickEventArgs e)
+        private void Bar_thongke_khieunai_ItemClick(object sender, ItemClickEventArgs e)
         {
-            LoadForm(new ctl_thongkedonthu(), "Thống kê đơn thư khiếu nại");
+            LoadForm(new Ctl_thongkedonthu(), "Thống kê đơn thư khiếu nại");
         }
-        private void cmb_nam_khieunai_EditValueChanged(object sender, EventArgs e)
+        private void Cmb_nam_khieunai_EditValueChanged(object sender, EventArgs e)
         {
             LoadData3();
         }
-        private void cmb_chonnam_tocao_EditValueChanged(object sender, EventArgs e)
+        private void Cmb_chonnam_tocao_EditValueChanged(object sender, EventArgs e)
         {
             LoadData4();
         }
-        private void bar_thongketocao_ItemClick(object sender, ItemClickEventArgs e)
+        private void Bar_thongketocao_ItemClick(object sender, ItemClickEventArgs e)
         {
             LoadForm(new ctl_thongketocao(), "Thống kê đơn thư tố cáo");
         }

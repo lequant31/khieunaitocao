@@ -376,10 +376,10 @@
     <Parameter Name="ma_canbo" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.dinhdanh_canbo" Method="dinhdanh_canbo">
+  <Function Name="dbo.Dinhdanh_canbo" Method="Dinhdanh_canbo">
     <Parameter Name="ma_donvi" Type="System.Int32" DbType="Int" />
     <Parameter Name="tendangnhap" Type="System.String" DbType="NVarChar(50)" />
-    <ElementType Name="dinhdanh_canboResult">
+    <ElementType Name="Dinhdanh_canboResult">
       <Column Name="ma_donvi_tb_donvi" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="ma_canbo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="sohieu_cand" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />

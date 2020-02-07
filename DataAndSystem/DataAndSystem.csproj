@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0A07E67-F8D8-4C67-B9B1-582778310547}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAndSystem</RootNamespace>
+    <AssemblyName>DataAndSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dialogs.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v19.1.Export, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v19.1.Core, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v19.1.UI, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraNavBar.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeMap.v19.1, Version=19.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="bieudo_cot_donthukhieunai_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bieudo_cot_donthutocao_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="check_chuyendonthu_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="check_chuyentocao_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="clonebidon.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="clonebidontocao.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="clonenhatkyguidon.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="clonenhatkyguidontocao.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cloneThongtinkhieunai.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="clonethongtintocao.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="dinhdanh_canbo_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="f_bidon_canchuyen_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="f_thongtinkhieunai_canchuyen_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Khieunaitocao.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Khieunaitocao.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Khieunaitocao.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Khieunaitocao.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Khieunaitocao.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="list_phanloai_khieunai_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="list_phanloai_tocao_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="list_quatrinhgiaiquyettocao_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="list_quatrinhgiaiquyet_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="list_thongtincanbo_linq_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="list_thongtindonthukhieunai_gopbang_linq_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="list_thongtintocao_linq_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="load_sua_canbo_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="nhatky_guidon_canchuyen_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\ctl_quanlycanbo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Systems\ctl_quanlycanbo.Designer.cs">
+      <DependentUpon>ctl_quanlycanbo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\dinhdanh.cs" />
+    <Compile Include="Systems\form_quanlycanbo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\form_quanlycanbo.Designer.cs">
+      <DependentUpon>form_quanlycanbo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\form_thaydoimatkhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\form_thaydoimatkhau.Designer.cs">
+      <DependentUpon>form_thaydoimatkhau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\frm_dangnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\frm_dangnhap.Designer.cs">
+      <DependentUpon>frm_dangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\mahoa.cs" />
+    <Compile Include="tb_bidon.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_bidon_tocao.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_bieudocot_donthukhieunai.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_bieudocot_donthutocao.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_canbochiensy.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_donvi.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_giaiquyetkhieunai.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_giaiquyettocao.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_locquatrinhgiaiquyet.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_locquatrinhgiaiquyet_tocao.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_nhatky_guidon.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_nhatky_guidon_tocao.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_phanloai_khieunai.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_phanloai_tocao.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_status_sua_xoa_donthukhieunai.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_temple_hinhthuc_xuly.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_temple_statuss.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_test.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_thongtinkhieunai.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tb_thongtintocao.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="thongketonghop_khieunai_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="thongketonghop_tocao_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="thongke_giaiquyetkhieunai_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="thongke_giaiquyettocao_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="thongtindonthu.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="thongtintocao.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\VietnameseSigns.cs" />
+    <Compile Include="xemcanbo_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xem_id_thongtinkhieunai_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xem_id_thongtintocao_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xem_thongtindonthu_gopbang_linq_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xem_thongtintocao_linq_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xem_thongtin_quatrinhgiaiquyettocao_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xem_thongtin_quatrinhgiaiquyet_linq_Result.cs">
+      <DependentUpon>Khieunaitocao.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Khieunaitocao.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Khieunaitocao.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="Khieunaitocao.edmx.diagram">
+      <DependentUpon>Khieunaitocao.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Khieunaitocao.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Khieunaitocao.Context.cs</LastGenOutput>
+      <DependentUpon>Khieunaitocao.edmx</DependentUpon>
+    </Content>
+    <Content Include="Khieunaitocao.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Khieunaitocao.edmx</DependentUpon>
+      <LastGenOutput>Khieunaitocao.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Systems\ctl_quanlycanbo.resx">
+      <DependentUpon>ctl_quanlycanbo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\form_quanlycanbo.resx">
+      <DependentUpon>form_quanlycanbo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\form_thaydoimatkhau.resx">
+      <DependentUpon>form_thaydoimatkhau.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\frm_dangnhap.resx">
+      <DependentUpon>frm_dangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

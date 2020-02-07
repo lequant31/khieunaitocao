@@ -8,38 +8,39 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DataAndSystem;
 
 namespace khieunaitocao
 {
-    public partial class ctl_thongkedonthu : DevExpress.XtraEditors.XtraUserControl
+    public partial class Ctl_thongkedonthu : DevExpress.XtraEditors.XtraUserControl
     {
         khieunaitocaoContextDataContext khieunaitocaoContextDataContext;
-        public ctl_thongkedonthu()
+        public Ctl_thongkedonthu()
         {
             InitializeComponent();
         }
 
-        private void ctl_thongkedonthu_Load(object sender, EventArgs e)
+        private void Ctl_thongkedonthu_Load(object sender, EventArgs e)
         {
             
         }
-        private void fun_load()
+        private void Fun_load()
         {
             using (khieunaitocaoContextDataContext = new khieunaitocaoContextDataContext())
             {
-                var list=khieunaitocaoContextDataContext.thongketonghop_khieunai(date_tungay.DateTime,date_denngay.DateTime,dinhdanh.madonvi).ToList();
+                var list=khieunaitocaoContextDataContext.thongketonghop_khieunai(date_tungay.DateTime,date_denngay.DateTime,Dinhdanh.madonvi).ToList();
                 grc_thongkedonthu.DataSource = list;
             }
         }
 
-        private void date_denngay_EditValueChanged(object sender, EventArgs e)
+        private void Date_denngay_EditValueChanged(object sender, EventArgs e)
         {
-            fun_load();
+            Fun_load();
         }
 
-        private void date_tungay_EditValueChanged(object sender, EventArgs e)
+        private void Date_tungay_EditValueChanged(object sender, EventArgs e)
         {
-            fun_load();
+            Fun_load();
         }
     }
 }

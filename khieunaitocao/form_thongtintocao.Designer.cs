@@ -1,6 +1,6 @@
 ﻿namespace khieunaitocao
 {
-    partial class form_thongtintocao
+    partial class Form_thongtintocao
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_thongtintocao));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_thongtintocao));
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -355,7 +355,7 @@
             this.bar_luu.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_luu.ImageOptions.Image")));
             this.bar_luu.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_luu.ImageOptions.LargeImage")));
             this.bar_luu.Name = "bar_luu";
-            this.bar_luu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_luu_ItemClick);
+            this.bar_luu.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_luu_ItemClick);
             // 
             // bar_xoa
             // 
@@ -364,7 +364,7 @@
             this.bar_xoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_xoa.ImageOptions.Image")));
             this.bar_xoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_xoa.ImageOptions.LargeImage")));
             this.bar_xoa.Name = "bar_xoa";
-            this.bar_xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_xoa_ItemClick);
+            this.bar_xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_xoa_ItemClick);
             // 
             // bar_lammoi
             // 
@@ -373,7 +373,7 @@
             this.bar_lammoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_lammoi.ImageOptions.Image")));
             this.bar_lammoi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_lammoi.ImageOptions.LargeImage")));
             this.bar_lammoi.Name = "bar_lammoi";
-            this.bar_lammoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_lammoi_ItemClick);
+            this.bar_lammoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_lammoi_ItemClick);
             // 
             // bar_download
             // 
@@ -523,7 +523,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repository_xoa_nhatky.Name = "repository_xoa_nhatky";
             this.repository_xoa_nhatky.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.repository_xoa_nhatky.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repository_xoa_nhatky_ButtonClick);
+            this.repository_xoa_nhatky.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.Repository_xoa_nhatky_ButtonClick);
             // 
             // gridColumn10
             // 
@@ -648,7 +648,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repository_xoa.Name = "repository_xoa";
             this.repository_xoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.repository_xoa.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repository_xoa_ButtonClick);
+            this.repository_xoa.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.Repository_xoa_ButtonClick);
             // 
             // gridColumn1
             // 
@@ -921,7 +921,7 @@
             this.xtraTab_canhan_tochuc.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
             this.xtraTabPage2});
-            this.xtraTab_canhan_tochuc.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtraTab_canhan_tochuc_SelectedPageChanged);
+            this.xtraTab_canhan_tochuc.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.XtraTab_canhan_tochuc_SelectedPageChanged);
             // 
             // xtraTabPage1
             // 
@@ -1312,7 +1312,7 @@
             this.rdb_tochuc_canhan.Size = new System.Drawing.Size(248, 23);
             this.rdb_tochuc_canhan.StyleController = this.layoutControl6;
             this.rdb_tochuc_canhan.TabIndex = 2;
-            this.rdb_tochuc_canhan.EditValueChanged += new System.EventHandler(this.rdb_tochuc_canhan_EditValueChanged);
+            this.rdb_tochuc_canhan.EditValueChanged += new System.EventHandler(this.Rdb_tochuc_canhan_EditValueChanged);
             // 
             // rdb_loaihinh_tocao
             // 
@@ -1889,7 +1889,7 @@
             this.Name = "form_thongtintocao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "form_thongtintocao";
-            this.Load += new System.EventHandler(this.form_thongtintocao_Load);
+            this.Load += new System.EventHandler(this.Form_thongtintocao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_root)).EndInit();
             this.panelControl_root.ResumeLayout(false);

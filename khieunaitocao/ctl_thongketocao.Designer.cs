@@ -80,7 +80,7 @@
             this.date_denngay.Properties.NullText = "Từ ngày";
             this.date_denngay.Size = new System.Drawing.Size(137, 20);
             this.date_denngay.TabIndex = 2;
-            this.date_denngay.EditValueChanged += new System.EventHandler(this.date_denngay_EditValueChanged);
+            this.date_denngay.EditValueChanged += new System.EventHandler(this.Date_denngay_EditValueChanged);
             // 
             // date_tungay
             // 
@@ -95,7 +95,7 @@
             this.date_tungay.Properties.NullText = "Từ ngày";
             this.date_tungay.Size = new System.Drawing.Size(136, 20);
             this.date_tungay.TabIndex = 1;
-            this.date_tungay.EditValueChanged += new System.EventHandler(this.date_tungay_EditValueChanged);
+            this.date_tungay.EditValueChanged += new System.EventHandler(this.Date_tungay_EditValueChanged);
             // 
             // grc_thongketocao
             // 

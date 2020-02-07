@@ -23,7 +23,6 @@ namespace khieunaitocao
         public string Password;
         public string path;
         public string localdest;
-        khieunaitocaoContextDataContext _khieunaitocaoContext;
         public test()
         {
             InitializeComponent();
@@ -32,7 +31,7 @@ namespace khieunaitocao
                 checkup.Enabled = false;
             }
         }
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        private void BackgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
 
             if (checkdown.Checked == true)

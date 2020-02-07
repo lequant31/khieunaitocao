@@ -1,6 +1,6 @@
 ﻿namespace khieunaitocao
 {
-    partial class thongtindonthucanhan
+    partial class Thongtindonthucanhan
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(thongtindonthucanhan));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Thongtindonthucanhan));
             DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
@@ -469,7 +469,7 @@
             this.bar_btn_save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_btn_save.ImageOptions.Image")));
             this.bar_btn_save.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_btn_save.ImageOptions.LargeImage")));
             this.bar_btn_save.Name = "bar_btn_save";
-            this.bar_btn_save.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_btn_save_ItemClick);
+            this.bar_btn_save.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_btn_save_ItemClick);
             // 
             // bar_xoa
             // 
@@ -478,7 +478,7 @@
             this.bar_xoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_xoa.ImageOptions.Image")));
             this.bar_xoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_xoa.ImageOptions.LargeImage")));
             this.bar_xoa.Name = "bar_xoa";
-            this.bar_xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_xoa_ItemClick);
+            this.bar_xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_xoa_ItemClick);
             // 
             // bar_btn_lammoi
             // 
@@ -487,7 +487,7 @@
             this.bar_btn_lammoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_btn_lammoi.ImageOptions.Image")));
             this.bar_btn_lammoi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_btn_lammoi.ImageOptions.LargeImage")));
             this.bar_btn_lammoi.Name = "bar_btn_lammoi";
-            this.bar_btn_lammoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_btn_lammoi_ItemClick);
+            this.bar_btn_lammoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_btn_lammoi_ItemClick);
             // 
             // barButtonItem4
             // 
@@ -615,8 +615,8 @@
             this.btn_dinhkem.Size = new System.Drawing.Size(417, 20);
             this.btn_dinhkem.StyleController = this.layoutControl6;
             this.btn_dinhkem.TabIndex = 20;
-            this.btn_dinhkem.Enter += new System.EventHandler(this.btn_dinhkem_Enter);
-            this.btn_dinhkem.Leave += new System.EventHandler(this.btn_dinhkem_Leave);
+            this.btn_dinhkem.Enter += new System.EventHandler(this.Btn_dinhkem_Enter);
+            this.btn_dinhkem.Leave += new System.EventHandler(this.Btn_dinhkem_Leave);
             // 
             // txt_madonthu
             // 
@@ -669,7 +669,7 @@
             this.xtraTab_canhan.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
             this.xtraTabPage2});
-            this.xtraTab_canhan.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.xtraTab_canhan_SelectedPageChanged);
+            this.xtraTab_canhan.SelectedPageChanged += new DevExpress.XtraTab.TabPageChangedEventHandler(this.XtraTab_canhan_SelectedPageChanged);
             // 
             // xtraTabPage1
             // 
@@ -1210,7 +1210,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repository_btn_xoa_nhatky.Name = "repository_btn_xoa_nhatky";
             this.repository_btn_xoa_nhatky.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.repository_btn_xoa_nhatky.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repository_btn_xoa_nhatky_ButtonClick);
+            this.repository_btn_xoa_nhatky.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.Repository_btn_xoa_nhatky_ButtonClick);
             // 
             // repositoryItemDateEdit1
             // 
@@ -1294,8 +1294,8 @@
             this.grv_bidon.OptionsView.ColumnAutoWidth = false;
             this.grv_bidon.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
             this.grv_bidon.OptionsView.ShowGroupPanel = false;
-            this.grv_bidon.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.grv_bidon_ValidateRow);
-            this.grv_bidon.KeyUp += new System.Windows.Forms.KeyEventHandler(this.grv_bidon_KeyUp);
+            this.grv_bidon.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.Grv_bidon_ValidateRow);
+            this.grv_bidon.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Grv_bidon_KeyUp);
             // 
             // gridColumn4
             // 
@@ -1372,7 +1372,7 @@
             "Thượng tá",
             "Đại tá"});
             this.repositoryItem_capbac.Name = "repositoryItem_capbac";
-            this.repositoryItem_capbac.EditValueChanged += new System.EventHandler(this.repositoryItem_capbac_EditValueChanged);
+            this.repositoryItem_capbac.EditValueChanged += new System.EventHandler(this.RepositoryItem_capbac_EditValueChanged);
             // 
             // gridColumn10
             // 
@@ -1455,7 +1455,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repository_btn_xoa.Name = "repository_btn_xoa";
             this.repository_btn_xoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.repository_btn_xoa.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.repository_btn_xoa_ButtonClick);
+            this.repository_btn_xoa.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.Repository_btn_xoa_ButtonClick);
             // 
             // Root
             // 
@@ -1493,7 +1493,7 @@
             this.rdb_canhan.Size = new System.Drawing.Size(225, 23);
             this.rdb_canhan.StyleController = this.layoutControl6;
             this.rdb_canhan.TabIndex = 2;
-            this.rdb_canhan.EditValueChanged += new System.EventHandler(this.rdb_canhan_EditValueChanged);
+            this.rdb_canhan.EditValueChanged += new System.EventHandler(this.Rdb_canhan_EditValueChanged);
             // 
             // radioGroup_hinhthuc
             // 
@@ -1543,8 +1543,8 @@
             this.com_loaidon.Size = new System.Drawing.Size(199, 20);
             this.com_loaidon.StyleController = this.layoutControl6;
             this.com_loaidon.TabIndex = 13;
-            this.com_loaidon.Enter += new System.EventHandler(this.com_loaidon_Enter);
-            this.com_loaidon.Leave += new System.EventHandler(this.com_loaidon_Leave);
+            this.com_loaidon.Enter += new System.EventHandler(this.Com_loaidon_Enter);
+            this.com_loaidon.Leave += new System.EventHandler(this.Com_loaidon_Leave);
             // 
             // rdb_tinhchatvuviec
             // 
@@ -1582,8 +1582,8 @@
             this.com_lydokhongdudkxl.Size = new System.Drawing.Size(314, 20);
             this.com_lydokhongdudkxl.StyleController = this.layoutControl6;
             this.com_lydokhongdudkxl.TabIndex = 18;
-            this.com_lydokhongdudkxl.Enter += new System.EventHandler(this.com_lydokhongdudkxl_Enter);
-            this.com_lydokhongdudkxl.Leave += new System.EventHandler(this.com_lydokhongdudkxl_Leave);
+            this.com_lydokhongdudkxl.Enter += new System.EventHandler(this.Com_lydokhongdudkxl_Enter);
+            this.com_lydokhongdudkxl.Leave += new System.EventHandler(this.Com_lydokhongdudkxl_Leave);
             // 
             // rdb_dieukienxuly
             // 
@@ -2341,7 +2341,7 @@
             this.Padding = new System.Windows.Forms.Padding(3);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thông tin đơn thư";
-            this.Load += new System.EventHandler(this.thongtindonthucanhan_Load);
+            this.Load += new System.EventHandler(this.Thongtindonthucanhan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_root)).EndInit();
             this.panelControl_root.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl6)).EndInit();

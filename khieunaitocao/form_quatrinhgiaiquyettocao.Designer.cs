@@ -1,6 +1,6 @@
 ﻿namespace khieunaitocao
 {
-    partial class form_quatrinhgiaiquyettocao
+    partial class Form_quatrinhgiaiquyettocao
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_quatrinhgiaiquyettocao));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_quatrinhgiaiquyettocao));
             this.panelControl_root = new DevExpress.XtraEditors.PanelControl();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
             this.txt_solangiaiquyet = new DevExpress.XtraEditors.TextEdit();
@@ -425,7 +425,7 @@
             this.bar_save.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_save.ImageOptions.Image")));
             this.bar_save.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_save.ImageOptions.LargeImage")));
             this.bar_save.Name = "bar_save";
-            this.bar_save.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_save_ItemClick);
+            this.bar_save.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_save_ItemClick);
             // 
             // bar_refresh
             // 
@@ -434,7 +434,7 @@
             this.bar_refresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_refresh.ImageOptions.Image")));
             this.bar_refresh.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_refresh.ImageOptions.LargeImage")));
             this.bar_refresh.Name = "bar_refresh";
-            this.bar_refresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_refresh_ItemClick);
+            this.bar_refresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_refresh_ItemClick);
             // 
             // bar_delete
             // 
@@ -443,7 +443,7 @@
             this.bar_delete.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_delete.ImageOptions.Image")));
             this.bar_delete.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_delete.ImageOptions.LargeImage")));
             this.bar_delete.Name = "bar_delete";
-            this.bar_delete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_delete_ItemClick);
+            this.bar_delete.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_delete_ItemClick);
             // 
             // check_quatrinhgiaiquyet
             // 
@@ -452,7 +452,7 @@
             this.check_quatrinhgiaiquyet.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("check_quatrinhgiaiquyet.ImageOptions.Image")));
             this.check_quatrinhgiaiquyet.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("check_quatrinhgiaiquyet.ImageOptions.LargeImage")));
             this.check_quatrinhgiaiquyet.Name = "check_quatrinhgiaiquyet";
-            this.check_quatrinhgiaiquyet.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.check_quatrinhgiaiquyet_CheckedChanged);
+            this.check_quatrinhgiaiquyet.CheckedChanged += new DevExpress.XtraBars.ItemClickEventHandler(this.Check_quatrinhgiaiquyet_CheckedChanged);
             // 
             // barDockControlTop
             // 
@@ -870,7 +870,7 @@
             this.date_tungay_giaiquyet.Size = new System.Drawing.Size(133, 20);
             this.date_tungay_giaiquyet.StyleController = this.layoutControl1;
             this.date_tungay_giaiquyet.TabIndex = 12;
-            this.date_tungay_giaiquyet.Leave += new System.EventHandler(this.date_tungay_giaiquyet_Leave);
+            this.date_tungay_giaiquyet.Leave += new System.EventHandler(this.Date_tungay_giaiquyet_Leave);
             // 
             // date_ngaygui_thongbao
             // 
@@ -961,7 +961,7 @@
             this.combo_hinhthuc_xuly.Size = new System.Drawing.Size(161, 20);
             this.combo_hinhthuc_xuly.StyleController = this.layoutControl1;
             this.combo_hinhthuc_xuly.TabIndex = 3;
-            this.combo_hinhthuc_xuly.Leave += new System.EventHandler(this.combo_hinhthuc_xuly_Leave);
+            this.combo_hinhthuc_xuly.Leave += new System.EventHandler(this.Combo_hinhthuc_xuly_Leave);
             // 
             // txt_ma_donthu_tocao
             // 
@@ -971,7 +971,7 @@
             this.txt_ma_donthu_tocao.Size = new System.Drawing.Size(118, 20);
             this.txt_ma_donthu_tocao.StyleController = this.layoutControl1;
             this.txt_ma_donthu_tocao.TabIndex = 1;
-            this.txt_ma_donthu_tocao.Leave += new System.EventHandler(this.txt_ma_donthu_tocao_Leave);
+            this.txt_ma_donthu_tocao.Leave += new System.EventHandler(this.Txt_ma_donthu_tocao_Leave);
             // 
             // date_ngaynop_luu_hoso
             // 
@@ -1818,7 +1818,7 @@
             this.Name = "form_quatrinhgiaiquyettocao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quá trình giải quyết tố cáo";
-            this.Load += new System.EventHandler(this.form_quatrinhgiaiquyettocao_Load);
+            this.Load += new System.EventHandler(this.Form_quatrinhgiaiquyettocao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl_root)).EndInit();
             this.panelControl_root.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

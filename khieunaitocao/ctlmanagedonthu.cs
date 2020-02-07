@@ -8,39 +8,40 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DataAndSystem;
 
 namespace khieunaitocao
 {
-    public partial class ctlmanagedonthu : DevExpress.XtraEditors.XtraUserControl
+    public partial class Ctlmanagedonthu : DevExpress.XtraEditors.XtraUserControl
     {
-        quanlythongtin ql = new quanlythongtin();
-        public ctlmanagedonthu()
+        //private quanlythongtin ql = new quanlythongtin();
+        public Ctlmanagedonthu()
         {
             InitializeComponent();
         }
         khieunaitocaoContextDataContext _khieunaitocaoContext;
-        private void donthu_load()
+        private void Donthu_load()
         {
             using (_khieunaitocaoContext = new khieunaitocaoContextDataContext())
             {
-                var _list = _khieunaitocaoContext.list_thongtindonthukhieunai_gopbang_linq(dinhdanh.madonvi).ToList();
+                var _list = _khieunaitocaoContext.list_thongtindonthukhieunai_gopbang_linq(Dinhdanh.madonvi).ToList();
 
                 grc_quanlydonthukhieunai.DataSource = _list;
                 //grv_quanlydonthukhieunai.SetFocusedRowCellValue( "ma_donthu_khieunai", 123);
             }
            
         }
-        private void bar_them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            thongtindonthucanhan f = new thongtindonthucanhan();
+            Thongtindonthucanhan f = new Thongtindonthucanhan();
             f.ShowDialog();
         }
 
-        private void ctlmanagedonthu_Load(object sender, EventArgs e)
+        private void Ctlmanagedonthu_Load(object sender, EventArgs e)
         {
             try
             {
-                donthu_load();
+                Donthu_load();
             }
             catch (Exception)
             {
@@ -50,7 +51,7 @@ namespace khieunaitocao
            
         }
 
-        private void bar_btn_sua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_btn_sua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             
             try
@@ -66,10 +67,12 @@ namespace khieunaitocao
                     }
                 }
                 #endregion
-                    thongtindonthucanhan f = new thongtindonthucanhan();
-                f.bool_sua = true;
-                
-                f.id_thongtinKN = i;
+                Thongtindonthucanhan f = new Thongtindonthucanhan
+                {
+                    bool_sua = true,
+
+                    id_thongtinKN = i
+                };
                 f.ShowDialog();
             }
             catch (Exception)
@@ -78,10 +81,12 @@ namespace khieunaitocao
             }
         }
 
-        private void grv_quanlydonthukhieunai_DoubleClick(object sender, EventArgs e)
+        private void Grv_quanlydonthukhieunai_DoubleClick(object sender, EventArgs e)
         {
-            thongtindonthucanhan f = new thongtindonthucanhan();
-            f.bool_sua = true;
+            Thongtindonthucanhan f = new Thongtindonthucanhan
+            {
+                bool_sua = true
+            };
             try
             {
                 int i = (int)grv_quanlydonthukhieunai.GetFocusedRowCellValue("id_thongtinhieunai");
@@ -94,14 +99,14 @@ namespace khieunaitocao
             }
         }
 
-        private void bar_btn_refresh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_btn_refresh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            donthu_load();
+            Donthu_load();
         }
-        private void bar_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             #region check permission
-            if (dinhdanh.quyenhan == 2)
+            if (Dinhdanh.quyenhan == 2)
             {
                 XtraMessageBox.Show("Tài khoản chỉ có quyền xem.\n Không được phép xóa");
                 return;
@@ -154,9 +159,9 @@ namespace khieunaitocao
            
         }
 
-        private void bar_quatrinhgiaiquyet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_quatrinhgiaiquyet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            thongtindonthucanhan f = new thongtindonthucanhan();
+            Thongtindonthucanhan f = new Thongtindonthucanhan();
             try
             {
                 int i = (int)grv_quanlydonthukhieunai.GetFocusedRowCellValue("id_thongtinhieunai");
@@ -171,7 +176,7 @@ namespace khieunaitocao
             }
         }
 
-        private void grv_quanlydonthukhieunai_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
+        private void Grv_quanlydonthukhieunai_CustomDrawRowIndicator(object sender, DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventArgs e)
         {
             if (e.Info.IsRowIndicator && e.RowHandle >= 0)
             {

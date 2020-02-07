@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2048
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29721.120
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "khieunaitocao", "khieunaitocao\khieunaitocao.csproj", "{A8053EEA-20C4-493E-8F5D-7D48C36DE3EC}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{EB70770F-A525-4421-8511-16432C6C835C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateShortcut", "CreateShortcut\CreateShortcut.csproj", "{13823CD8-7B2D-4EF6-9E0C-2A68A61E23D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAndSystem", "DataAndSystem\DataAndSystem.csproj", "{D0A07E67-F8D8-4C67-B9B1-582778310547}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{13823CD8-7B2D-4EF6-9E0C-2A68A61E23D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13823CD8-7B2D-4EF6-9E0C-2A68A61E23D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13823CD8-7B2D-4EF6-9E0C-2A68A61E23D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0A07E67-F8D8-4C67-B9B1-582778310547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0A07E67-F8D8-4C67-B9B1-582778310547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0A07E67-F8D8-4C67-B9B1-582778310547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0A07E67-F8D8-4C67-B9B1-582778310547}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

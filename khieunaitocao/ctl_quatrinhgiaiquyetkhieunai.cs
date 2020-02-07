@@ -8,43 +8,46 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DataAndSystem;
 
 namespace khieunaitocao
 {
-    public partial class ctl_quatrinhgiaiquyetkhieunai : DevExpress.XtraEditors.XtraUserControl
+    public partial class Ctl_quatrinhgiaiquyetkhieunai : DevExpress.XtraEditors.XtraUserControl
     {
-        public ctl_quatrinhgiaiquyetkhieunai()
+        public Ctl_quatrinhgiaiquyetkhieunai()
         {
             InitializeComponent();
         }
         khieunaitocaoContextDataContext _khieunaitocaoContext;
-        public void funload()
+        public void Funload()
         {
             using (_khieunaitocaoContext = new khieunaitocaoContextDataContext())
             {
-                var _list = _khieunaitocaoContext.list_quatrinhgiaiquyet(dinhdanh.madonvi).ToList();
+                var _list = _khieunaitocaoContext.list_quatrinhgiaiquyet(Dinhdanh.madonvi).ToList();
                 grc_quatrinhgiaiquyet.DataSource = _list;
             }
         }
-        private void bar_them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_them_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            form_quatrinhgiaiquyetkhieunai f = new form_quatrinhgiaiquyetkhieunai();
+            Form_quatrinhgiaiquyetkhieunai f = new Form_quatrinhgiaiquyetkhieunai();
             f.ShowDialog();
         }
-        private void ctl_quatrinhgiaiquyetkhieunai_Load(object sender, EventArgs e)
+        private void Ctl_quatrinhgiaiquyetkhieunai_Load(object sender, EventArgs e)
         {
-            funload();
+            Funload();
         }
 
-        private void bar_lammoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_lammoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            funload();
+            Funload();
         }
 
-        private void bar_sua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_sua_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            form_quatrinhgiaiquyetkhieunai f = new form_quatrinhgiaiquyetkhieunai();
-            f.bool_sua = true;
+            Form_quatrinhgiaiquyetkhieunai f = new Form_quatrinhgiaiquyetkhieunai
+            {
+                bool_sua = true
+            };
             try
             {
                 int i = (int)grv_quatrinhgiaiquyet.GetFocusedRowCellValue("id_quatrinhgiaiquyetkhieunai");
@@ -59,10 +62,12 @@ namespace khieunaitocao
             }
         }
 
-        private void grv_quatrinhgiaiquyet_DoubleClick(object sender, EventArgs e)
+        private void Grv_quatrinhgiaiquyet_DoubleClick(object sender, EventArgs e)
         {
-            form_quatrinhgiaiquyetkhieunai f = new form_quatrinhgiaiquyetkhieunai();
-            f.bool_sua = true;
+            Form_quatrinhgiaiquyetkhieunai f = new Form_quatrinhgiaiquyetkhieunai
+            {
+                bool_sua = true
+            };
             try
             {
                 int i = (int)grv_quatrinhgiaiquyet.GetFocusedRowCellValue("id_quatrinhgiaiquyetkhieunai");
@@ -77,10 +82,10 @@ namespace khieunaitocao
             }
         }
 
-        private void bar_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             #region check dieukien
-            if (dinhdanh.quyenhan == 2)
+            if (Dinhdanh.quyenhan == 2)
             {
                 XtraMessageBox.Show("Không có quyền xóa");
                 return;
@@ -108,7 +113,7 @@ namespace khieunaitocao
             }
         }
 
-        private void bar_chuyendonvikhac_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_chuyendonvikhac_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             int i = (int)grv_quatrinhgiaiquyet.GetFocusedRowCellValue("id_thongtinkhieunai");
             int y = (int)grv_quatrinhgiaiquyet.GetFocusedRowCellValue("id_quatrinhgiaiquyetkhieunai");
@@ -120,7 +125,7 @@ namespace khieunaitocao
 
                     var _chuyen = _khieunaitocaoContext.check_chuyendonthu(y).SingleOrDefault() ;
                     #region check dieukien
-                    if (dinhdanh.quyenhan == 2)
+                    if (Dinhdanh.quyenhan == 2)
                     {
                         XtraMessageBox.Show("Không có quyền hạn");
                         return;
@@ -138,7 +143,7 @@ namespace khieunaitocao
                     #endregion
 
                     var _sua = _khieunaitocaoContext.xem_thongtin_quatrinhgiaiquyet_linq(y).SingleOrDefault();
-                    _khieunaitocaoContext.chuyendonthukhieunai(i, (int?)_sua.donvinhan, dinhdanh.madonvi, y);
+                    _khieunaitocaoContext.chuyendonthukhieunai(i, (int?)_sua.donvinhan, Dinhdanh.madonvi, y);
                     _khieunaitocaoContext.update_trangthaichuyedonthu(y, "Delivered");
                     XtraMessageBox.Show("Chuyển thông tin thành công");
                 }
@@ -149,7 +154,7 @@ namespace khieunaitocao
             }
         }
 
-        private void grv_quatrinhgiaiquyet_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
+        private void Grv_quatrinhgiaiquyet_RowStyle(object sender, DevExpress.XtraGrid.Views.Grid.RowStyleEventArgs e)
         {
             if(e.RowHandle >= 0)
             {

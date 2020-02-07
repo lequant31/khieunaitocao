@@ -8,12 +8,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DataAndSystem;
 
 namespace khieunaitocao
 {
-    public partial class form_thongtintocao : DevExpress.XtraEditors.XtraForm
+    public partial class Form_thongtintocao : DevExpress.XtraEditors.XtraForm
     {
-        public form_thongtintocao()
+        public Form_thongtintocao()
         {
             InitializeComponent();
         }
@@ -22,7 +23,7 @@ namespace khieunaitocao
         public string ngaysua = "";
         khieunaitocaoContextDataContext _khieunaitocaoContext = new khieunaitocaoContextDataContext();
         tb_thongtintocao objTC;
-        private void form_thongtintocao_Load(object sender, EventArgs e)
+        private void Form_thongtintocao_Load(object sender, EventArgs e)
         {
             var list = _khieunaitocaoContext.list_phanloai_tocao();
             treeListLookUp_hinhthuctocao.Properties.DataSource = list;
@@ -31,19 +32,19 @@ namespace khieunaitocao
 
             if (bool_sua==false)
             {
-                txt_ma_tocao.Text = dinhdanh.kyhieu_donvi;
-                thongtin_addnew();
+                txt_ma_tocao.Text = Dinhdanh.kyhieu_donvi;
+                Thongtin_addnew();
             }
             if (bool_sua == true)
             {
-                thongtin_edit();
+                Thongtin_edit();
             }
         }
-        private void thongtin_load()
+        private void Thongtin_load()
         {
             objTC = new tb_thongtintocao();
             bool_sua = false;
-            txt_ma_tocao.Text = dinhdanh.kyhieu_donvi;
+            txt_ma_tocao.Text = Dinhdanh.kyhieu_donvi;
             rdb_tochuc_canhan.SelectedIndex = -1;
             rdb_loaihinh_tocao.SelectedIndex = -1;
             txt_hoten_canhan.Text = null;
@@ -70,13 +71,13 @@ namespace khieunaitocao
             memo_ghichu.Text = null;
             
         }
-        private void thongtin_addnew()
+        private void Thongtin_addnew()
         {
             objTC = new tb_thongtintocao();
             grc_bidon_tocao.DataSource = objTC.tb_bidon_tocaos;
             grc_nhatky_guidon_tocao.DataSource = objTC.tb_nhatky_guidon_tocaos;
         }
-        private void thongtin_edit()
+        private void Thongtin_edit()
         {
             var _list_thongtintocao = _khieunaitocaoContext.xem_thongtintocao_linq(id_thongtintocao).SingleOrDefault();
 
@@ -139,7 +140,7 @@ namespace khieunaitocao
             grc_nhatky_guidon_tocao.DataSource = objTC.tb_nhatky_guidon_tocaos;
             
         }
-        private void xtraTab_canhan_tochuc_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        private void XtraTab_canhan_tochuc_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
             if (xtraTab_canhan_tochuc.SelectedTabPageIndex == 0)
             {
@@ -150,7 +151,7 @@ namespace khieunaitocao
                 rdb_tochuc_canhan.SelectedIndex = 1;
             }
         }
-        private void rdb_tochuc_canhan_EditValueChanged(object sender, EventArgs e)
+        private void Rdb_tochuc_canhan_EditValueChanged(object sender, EventArgs e)
         {
             if (rdb_tochuc_canhan.SelectedIndex == 0)
             {
@@ -165,14 +166,14 @@ namespace khieunaitocao
                 layoutContro_tochuc.Enabled = true;
             }
         }
-        private void bar_lammoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_lammoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            thongtin_load();
+            Thongtin_load();
         }
-        private void bar_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             #region check permission
-            if (dinhdanh.quyenhan == 2)
+            if (Dinhdanh.quyenhan == 2)
             {
                 XtraMessageBox.Show("Tài khoản chỉ có quyền xem.\n Không được phép xóa");
                 return;
@@ -203,25 +204,25 @@ namespace khieunaitocao
                 throw;
             }
         }
-        private void repository_xoa_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private void Repository_xoa_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn xóa thông tin?", "Confirmation", MessageBoxButtons.YesNo) !=
                DialogResult.Yes)
                 return;
             grv_bidon_tocao.DeleteSelectedRows();
         }
-        private void repository_xoa_nhatky_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private void Repository_xoa_nhatky_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn xóa thông tin?", "Confirmation", MessageBoxButtons.YesNo) !=
                DialogResult.Yes)
                 return;
             grv_nhatky_guidon_tocao.DeleteSelectedRows();
         }
-        private void bar_luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
          
             #region kiemtra
-            if (dinhdanh.quyenhan == 2)
+            if (Dinhdanh.quyenhan == 2)
             {
                 XtraMessageBox.Show("Tài khoản chỉ có quyền xem.\n Không được phép thay đổi");
                 return;
@@ -254,7 +255,7 @@ namespace khieunaitocao
             if (bool_sua == false)
             {
                 //var _lst = _khieunaitocaoContext.tb_thongtinkhieunais.Where(p => p.ma_donthu_khieunai == txt_madonthu.Text.Trim()).FirstOrDefault();
-                int _lst = _khieunaitocaoContext.check_matocao_linq(dinhdanh.madonvi, txt_ma_tocao.Text.Trim());
+                int _lst = _khieunaitocaoContext.check_matocao_linq(Dinhdanh.madonvi, txt_ma_tocao.Text.Trim());
                 if (_lst == 1)
                 {
                     XtraMessageBox.Show("Mã đơn thư tố cáo đã tồn tại");
@@ -267,9 +268,9 @@ namespace khieunaitocao
             {
                 objTC = _khieunaitocaoContext.tb_thongtintocaos.Where(a => a.ma_donthu_tocao == txt_ma_tocao.Text).SingleOrDefault();
             }
-            objTC.ma_donvi = dinhdanh.madonvi;
+            objTC.ma_donvi = Dinhdanh.madonvi;
             objTC.ma_donthu_tocao = txt_ma_tocao.Text.Trim();
-            objTC.ma_canbo_nhapdulieu = dinhdanh.ma_canbo;
+            objTC.ma_canbo_nhapdulieu = Dinhdanh.ma_canbo;
             objTC.tochuc_canhan = Convert.ToInt32(rdb_tochuc_canhan.EditValue);
             objTC.nacdanh_codanh = Convert.ToInt32(rdb_loaihinh_tocao.EditValue);
             if (rdb_tochuc_canhan.SelectedIndex==0)

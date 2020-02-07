@@ -1,6 +1,6 @@
 ﻿namespace khieunaitocao
 {
-    partial class ctlmanagedonthu
+    partial class Ctlmanagedonthu
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ctlmanagedonthu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ctlmanagedonthu));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.bar_them = new DevExpress.XtraBars.BarButtonItem();
@@ -105,7 +105,7 @@
             this.bar_them.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_them.ImageOptions.Image")));
             this.bar_them.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_them.ImageOptions.LargeImage")));
             this.bar_them.Name = "bar_them";
-            this.bar_them.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_them_ItemClick);
+            this.bar_them.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_them_ItemClick);
             // 
             // bar_btn_sua
             // 
@@ -114,7 +114,7 @@
             this.bar_btn_sua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_btn_sua.ImageOptions.Image")));
             this.bar_btn_sua.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_btn_sua.ImageOptions.LargeImage")));
             this.bar_btn_sua.Name = "bar_btn_sua";
-            this.bar_btn_sua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_btn_sua_ItemClick);
+            this.bar_btn_sua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_btn_sua_ItemClick);
             // 
             // bar_btn_refresh
             // 
@@ -123,7 +123,7 @@
             this.bar_btn_refresh.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_btn_refresh.ImageOptions.Image")));
             this.bar_btn_refresh.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_btn_refresh.ImageOptions.LargeImage")));
             this.bar_btn_refresh.Name = "bar_btn_refresh";
-            this.bar_btn_refresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_btn_refresh_ItemClick);
+            this.bar_btn_refresh.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_btn_refresh_ItemClick);
             // 
             // bar_xoa
             // 
@@ -132,7 +132,7 @@
             this.bar_xoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_xoa.ImageOptions.Image")));
             this.bar_xoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_xoa.ImageOptions.LargeImage")));
             this.bar_xoa.Name = "bar_xoa";
-            this.bar_xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_xoa_ItemClick);
+            this.bar_xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_xoa_ItemClick);
             // 
             // barButtonItem5
             // 
@@ -214,8 +214,8 @@
             this.grv_quanlydonthukhieunai.Name = "grv_quanlydonthukhieunai";
             this.grv_quanlydonthukhieunai.OptionsView.ShowAutoFilterRow = true;
             this.grv_quanlydonthukhieunai.OptionsView.ShowFooter = true;
-            this.grv_quanlydonthukhieunai.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.grv_quanlydonthukhieunai_CustomDrawRowIndicator);
-            this.grv_quanlydonthukhieunai.DoubleClick += new System.EventHandler(this.grv_quanlydonthukhieunai_DoubleClick);
+            this.grv_quanlydonthukhieunai.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.Grv_quanlydonthukhieunai_CustomDrawRowIndicator);
+            this.grv_quanlydonthukhieunai.DoubleClick += new System.EventHandler(this.Grv_quanlydonthukhieunai_DoubleClick);
             // 
             // gridColumn6
             // 
@@ -318,7 +318,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "ctlmanagedonthu";
             this.Size = new System.Drawing.Size(1052, 427);
-            this.Load += new System.EventHandler(this.ctlmanagedonthu_Load);
+            this.Load += new System.EventHandler(this.Ctlmanagedonthu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);

@@ -116,7 +116,7 @@
             this.bar_them.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_them.ImageOptions.Image")));
             this.bar_them.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_them.ImageOptions.LargeImage")));
             this.bar_them.Name = "bar_them";
-            this.bar_them.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_them_ItemClick);
+            this.bar_them.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_them_ItemClick);
             // 
             // bar_sua
             // 
@@ -125,7 +125,7 @@
             this.bar_sua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_sua.ImageOptions.Image")));
             this.bar_sua.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_sua.ImageOptions.LargeImage")));
             this.bar_sua.Name = "bar_sua";
-            this.bar_sua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_sua_ItemClick);
+            this.bar_sua.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_sua_ItemClick);
             // 
             // bar_lammoi
             // 
@@ -134,7 +134,7 @@
             this.bar_lammoi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_lammoi.ImageOptions.Image")));
             this.bar_lammoi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_lammoi.ImageOptions.LargeImage")));
             this.bar_lammoi.Name = "bar_lammoi";
-            this.bar_lammoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_lammoi_ItemClick);
+            this.bar_lammoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_lammoi_ItemClick);
             // 
             // bar_xoa
             // 
@@ -143,7 +143,7 @@
             this.bar_xoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("bar_xoa.ImageOptions.Image")));
             this.bar_xoa.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("bar_xoa.ImageOptions.LargeImage")));
             this.bar_xoa.Name = "bar_xoa";
-            this.bar_xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_xoa_ItemClick);
+            this.bar_xoa.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_xoa_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -237,8 +237,8 @@
             this.grv_quatrinhgiaiquyet_tocao.Name = "grv_quatrinhgiaiquyet_tocao";
             this.grv_quatrinhgiaiquyet_tocao.OptionsView.ColumnAutoWidth = false;
             this.grv_quatrinhgiaiquyet_tocao.OptionsView.ShowAutoFilterRow = true;
-            this.grv_quatrinhgiaiquyet_tocao.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.grv_quatrinhgiaiquyet_tocao_RowStyle);
-            this.grv_quatrinhgiaiquyet_tocao.DoubleClick += new System.EventHandler(this.grv_quatrinhgiaiquyet_tocao_DoubleClick);
+            this.grv_quatrinhgiaiquyet_tocao.RowStyle += new DevExpress.XtraGrid.Views.Grid.RowStyleEventHandler(this.Grv_quatrinhgiaiquyet_tocao_RowStyle);
+            this.grv_quatrinhgiaiquyet_tocao.DoubleClick += new System.EventHandler(this.Grv_quatrinhgiaiquyet_tocao_DoubleClick);
             // 
             // gridColumn1
             // 
@@ -389,7 +389,7 @@
             this.bar_chuyendontocao.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
             this.bar_chuyendontocao.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
             this.bar_chuyendontocao.Name = "bar_chuyendontocao";
-            this.bar_chuyendontocao.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bar_chuyendontocao_ItemClick);
+            this.bar_chuyendontocao.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Bar_chuyendontocao_ItemClick);
             // 
             // ctlquatrinhgiaiquyettocao
             // 
@@ -402,7 +402,7 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "ctlquatrinhgiaiquyettocao";
             this.Size = new System.Drawing.Size(955, 515);
-            this.Load += new System.EventHandler(this.ctlquatrinhgiaiquyettocao_Load);
+            this.Load += new System.EventHandler(this.Ctlquatrinhgiaiquyettocao_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);

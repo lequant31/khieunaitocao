@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAndSystem;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -57,14 +58,14 @@ namespace khieunaitocao
             //#endregion
 
             #region login
-            var _dangnhap = new frm_dangnhap();
+            var _dangnhap = new Frm_dangnhap();
             _dangnhap.ShowDialog();
             if (_dangnhap.DialogResult != DialogResult.OK)
             {
                 return;
             }
             #endregion
-            Application.Run(new quanlythongtin());
+            Application.Run(new Quanlythongtin());
         }
     }
 }

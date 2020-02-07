@@ -245,11 +245,11 @@ namespace khieunaitocao
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.dinhdanh_canbo")]
-		public ISingleResult<dinhdanh_canboResult> dinhdanh_canbo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma_donvi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tendangnhap)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.Dinhdanh_canbo")]
+		public ISingleResult<Dinhdanh_canboResult> Dinhdanh_canbo([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma_donvi, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(50)")] string tendangnhap)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma_donvi, tendangnhap);
-			return ((ISingleResult<dinhdanh_canboResult>)(result.ReturnValue));
+			return ((ISingleResult<Dinhdanh_canboResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.list_phanloai_khieunai")]
@@ -8604,7 +8604,7 @@ namespace khieunaitocao
 		}
 	}
 	
-	public partial class dinhdanh_canboResult
+	public partial class Dinhdanh_canboResult
 	{
 		
 		private int _ma_donvi_tb_donvi;
@@ -8631,7 +8631,7 @@ namespace khieunaitocao
 		
 		private string _kyhieu_donvi;
 		
-		public dinhdanh_canboResult()
+		public Dinhdanh_canboResult()
 		{
 		}
 		

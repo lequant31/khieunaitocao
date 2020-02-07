@@ -8,12 +8,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DataAndSystem;
 
 namespace khieunaitocao
 {
-    public partial class form_quatrinhgiaiquyetkhieunai : DevExpress.XtraEditors.XtraForm
+    public partial class Form_quatrinhgiaiquyetkhieunai : DevExpress.XtraEditors.XtraForm
     {
-        public form_quatrinhgiaiquyetkhieunai()
+        public Form_quatrinhgiaiquyetkhieunai()
         {
             InitializeComponent();
         }
@@ -24,7 +25,7 @@ namespace khieunaitocao
         public string trangthaigiaiquyet;
         public string status;
         public int hinhthucxuly;
-        private void load_items_donvi()
+        private void Load_items_donvi()
         {
             try
             {
@@ -103,14 +104,14 @@ namespace khieunaitocao
             using (_khieunaitocaoContext = new khieunaitocaoContextDataContext())
             {
                 #region check dieu kien
-                if (dinhdanh.quyenhan == 2)
+                if (Dinhdanh.quyenhan == 2)
                 {
                     XtraMessageBox.Show("Không được quyền thay đổi");
                     return;
                 }
                 if (bool_sua == false)
                 {
-                    var solan = _khieunaitocaoContext.check_solangiaiquyet(dinhdanh.madonvi, txt_madonthukhieunai.Text.Trim(), txt_lankhieunaithu.Text.Trim()).ToList();
+                    var solan = _khieunaitocaoContext.check_solangiaiquyet(Dinhdanh.madonvi, txt_madonthukhieunai.Text.Trim(), txt_lankhieunaithu.Text.Trim()).ToList();
                     if (txt_lankhieunaithu.Text.Trim() != "1" && txt_lankhieunaithu.Text.Trim() != "2")
                     {
                         XtraMessageBox.Show("Vui lòng chỉ nhập số 1 cho lần đầu.\n Số 2 cho lần giải quyết tiếp theo.");
@@ -136,7 +137,7 @@ namespace khieunaitocao
                 }
                 
                 #endregion
-                var id_thongtinkhieunai = _khieunaitocaoContext.xem_id_thongtinkhieunai(txt_madonthukhieunai.Text.Trim(),dinhdanh.madonvi).SingleOrDefault();
+                var id_thongtinkhieunai = _khieunaitocaoContext.xem_id_thongtinkhieunai(txt_madonthukhieunai.Text.Trim(),Dinhdanh.madonvi).SingleOrDefault();
                 int _ID = id_thongtinkhieunai.id_thongtinhieunai;
                 int? _id_ma_quatrinhgiaiquyet_guiden = id_thongtinkhieunai.ma_quatrinhgiaiquyet_donvichuyenden;
                 int hinhthuc_xacminh = rdb_hinhthucxacminh.SelectedIndex;              
@@ -230,7 +231,7 @@ namespace khieunaitocao
             }
                      
         }
-        private void load_sua()
+        private void Load_sua()
         {
             using (_khieunaitocaoContext = new khieunaitocaoContextDataContext())
             {
@@ -307,15 +308,15 @@ namespace khieunaitocao
                 }
             }
         }
-        private void form_quatrinhgiaiquyetkhieunai_Load(object sender, EventArgs e)
+        private void Form_quatrinhgiaiquyetkhieunai_Load(object sender, EventArgs e)
         {
-            load_items_donvi();
+            Load_items_donvi();
             if (bool_sua == true)
             {
-                load_sua();
+                Load_sua();
             }
         }
-        private void bar_luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_luu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             try
             {
@@ -329,10 +330,10 @@ namespace khieunaitocao
             }
 
         }
-        private void bar_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             #region check dieukien
-            if (dinhdanh.quyenhan == 2)
+            if (Dinhdanh.quyenhan == 2)
             {
                 XtraMessageBox.Show("Không có quyền xóa");
                 return;
@@ -359,17 +360,17 @@ namespace khieunaitocao
                 XtraMessageBox.Show("Vui lòng chọn thông tin cần xóa");
             }
         }
-        private void bar_lammoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_lammoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             Fun_null();
         }
-        private void txt_madonthukhieunai_Leave(object sender, EventArgs e)
+        private void Txt_madonthukhieunai_Leave(object sender, EventArgs e)
         {
             using (_khieunaitocaoContext = new khieunaitocaoContextDataContext())
             {
                 #region check donvi
                 int? i;
-                i = _khieunaitocaoContext.check_madonthu_linq(dinhdanh.madonvi, txt_madonthukhieunai.Text.Trim());
+                i = _khieunaitocaoContext.check_madonthu_linq(Dinhdanh.madonvi, txt_madonthukhieunai.Text.Trim());
                 if (i == 0)
                 {
                     XtraMessageBox.Show("Đơn thư không tồn tại");
@@ -378,11 +379,11 @@ namespace khieunaitocao
                     return;
                 }
                 #endregion
-                var tomtatnoidung = _khieunaitocaoContext.tomtatnoidungdongthu(txt_madonthukhieunai.Text.Trim(),dinhdanh.madonvi).SingleOrDefault();
+                var tomtatnoidung = _khieunaitocaoContext.tomtatnoidungdongthu(txt_madonthukhieunai.Text.Trim(),Dinhdanh.madonvi).SingleOrDefault();
                 mem_noidungdonthu.EditValue = tomtatnoidung.tomtat_noidung;
             }                
         }
-        private void txt_lankhieunaithu_Leave(object sender, EventArgs e)
+        private void Txt_lankhieunaithu_Leave(object sender, EventArgs e)
         {
             #region check so lan khieu nai
             if(txt_lankhieunaithu.Text.Trim() !="1" && txt_lankhieunaithu.Text.Trim() != "2")
@@ -394,7 +395,7 @@ namespace khieunaitocao
             }
             #endregion
         }
-        private void com_hinhthucxuly_Leave(object sender, EventArgs e)
+        private void Com_hinhthucxuly_Leave(object sender, EventArgs e)
         {
             #region check hinh thuc xu ly
             if(com_hinhthucxuly.Text == "Chuyển đơn vị khác")
@@ -422,11 +423,11 @@ namespace khieunaitocao
             }
             #endregion
         }
-        private void txt_songaygiaiquyet_Leave(object sender, EventArgs e)
+        private void Txt_songaygiaiquyet_Leave(object sender, EventArgs e)
         {
 
         }
-        private void date_ngaygiaiquyet_tungay_Leave(object sender, EventArgs e)
+        private void Date_ngaygiaiquyet_tungay_Leave(object sender, EventArgs e)
         {
             if (txt_songaygiaiquyet.Text.Trim() != "")
             {
@@ -437,7 +438,7 @@ namespace khieunaitocao
             }
             else return;
         }
-        private void com_ketquaxacminh_Leave(object sender, EventArgs e)
+        private void Com_ketquaxacminh_Leave(object sender, EventArgs e)
         {
             if(com_ketquaxacminh.Text != "Rút khiếu nại, tố cáo")
             {
@@ -448,7 +449,7 @@ namespace khieunaitocao
                 date_ngayrut.Properties.ReadOnly = true;
             }
         }
-        private void check_quatrinhgiaiquyet_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Check_quatrinhgiaiquyet_CheckedChanged(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (check_quatrinhgiaiquyet.Checked)
             {
@@ -462,17 +463,13 @@ namespace khieunaitocao
                 trangthaigiaiquyet = "Unlock";
             }
         }
-        private void check_quatrinhgiaiquyet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Check_quatrinhgiaiquyet_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             if (check_quatrinhgiaiquyet.Checked)
             {
                 XtraMessageBox.Show("Không thể sửa, xóa sau khi chọn kết thúc giải quyết");
 
             }
-            
-        }
-        private void look_donvinhan_EditValueChanged(object sender, EventArgs e)
-        {
             
         }
     }

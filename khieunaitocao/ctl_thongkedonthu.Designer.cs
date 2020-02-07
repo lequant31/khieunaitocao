@@ -1,6 +1,6 @@
 ﻿namespace khieunaitocao
 {
-    partial class ctl_thongkedonthu
+    partial class Ctl_thongkedonthu
     {
         /// <summary> 
         /// Required designer variable.
@@ -254,7 +254,7 @@
             this.date_tungay.Properties.NullText = "Từ ngày";
             this.date_tungay.Size = new System.Drawing.Size(128, 20);
             this.date_tungay.TabIndex = 1;
-            this.date_tungay.EditValueChanged += new System.EventHandler(this.date_tungay_EditValueChanged);
+            this.date_tungay.EditValueChanged += new System.EventHandler(this.Date_tungay_EditValueChanged);
             // 
             // date_denngay
             // 
@@ -268,7 +268,7 @@
             this.date_denngay.Properties.NullText = "Đến ngày";
             this.date_denngay.Size = new System.Drawing.Size(128, 20);
             this.date_denngay.TabIndex = 2;
-            this.date_denngay.EditValueChanged += new System.EventHandler(this.date_denngay_EditValueChanged);
+            this.date_denngay.EditValueChanged += new System.EventHandler(this.Date_denngay_EditValueChanged);
             // 
             // ctl_thongkedonthu
             // 
@@ -279,7 +279,7 @@
             this.Controls.Add(this.grc_thongkedonthu);
             this.Name = "ctl_thongkedonthu";
             this.Size = new System.Drawing.Size(1241, 354);
-            this.Load += new System.EventHandler(this.ctl_thongkedonthu_Load);
+            this.Load += new System.EventHandler(this.Ctl_thongkedonthu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grc_thongkedonthu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grv_thongkedonthu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.date_tungay.Properties.CalendarTimeProperties)).EndInit();

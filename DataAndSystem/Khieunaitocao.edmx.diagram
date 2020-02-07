@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7b93301b8e04473894a02a103c8af896" Name="Diagram1">
+        <EntityTypeShape EntityType="khieunaitocaoModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_bidon" Width="1.5" PointX="5.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_bidon_tocao" Width="1.5" PointX="5.25" PointY="29.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_canbochiensy" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_donvi" Width="1.5" PointX="0.75" PointY="25.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_giaiquyetkhieunai" Width="1.5" PointX="5.25" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_giaiquyettocao" Width="1.5" PointX="5.25" PointY="37.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_nhatky_guidon" Width="1.5" PointX="5.25" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_nhatky_guidon_tocao" Width="1.5" PointX="5.25" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_status_sua_xoa_donthukhieunai" Width="1.5" PointX="5.25" PointY="27" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_thongtinkhieunai" Width="1.5" PointX="3" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_thongtintocao" Width="1.5" PointX="3" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.clonebidon" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.clonebidontocao" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.clonenhatkyguidon" Width="1.5" PointX="7.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.clonenhatkyguidontocao" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.cloneThongtinkhieunai" Width="1.5" PointX="9.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.clonethongtintocao" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_phanloai_khieunai" Width="1.5" PointX="11.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_phanloai_tocao" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_temple_hinhthuc_xuly" Width="1.5" PointX="13.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_temple_statuss" Width="1.5" PointX="13.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_test" Width="1.5" PointX="13.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_bieudocot_donthukhieunai" Width="1.5" PointX="11.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_bieudocot_donthutocao" Width="1.5" PointX="13.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_locquatrinhgiaiquyet" Width="1.5" PointX="7.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.tb_locquatrinhgiaiquyet_tocao" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.thongtindonthu" Width="1.5" PointX="15.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="khieunaitocaoModel.thongtintocao" Width="1.5" PointX="9.75" PointY="16.75" IsExpanded="true" />
+        <AssociationConnector Association="khieunaitocaoModel.FK_tb_bidon_tb_thongtinkhieunai" ManuallyRouted="false" />
+        <AssociationConnector Association="khieunaitocaoModel.FK_tb_bidon_tocao_tb_thongtintocao" ManuallyRouted="false" />
+        <AssociationConnector Association="khieunaitocaoModel.FK_tb_canbochiensy_tb_donvi" ManuallyRouted="false" />
+        <AssociationConnector Association="khieunaitocaoModel.FK_tb_thongtinkhieunai_tb_donvi" ManuallyRouted="false" />
+        <AssociationConnector Association="khieunaitocaoModel.FK_tb_thongtintocao_tb_donvi" ManuallyRouted="false" />
+        <AssociationConnector Association="khieunaitocaoModel.FK_tb_giaiquyetkhieunai_tb_thongtinkhieunai" ManuallyRouted="false" />
+        <AssociationConnector Association="khieunaitocaoModel.FK_tb_giaiquyettocao_tb_thongtintocao" ManuallyRouted="false" />
+        <AssociationConnector Association="khieunaitocaoModel.FK_tb_nhatky_guidon_tb_thongtinkhieunai" ManuallyRouted="false" />
+        <AssociationConnector Association="khieunaitocaoModel.FK_tb_nhatky_guidon_tocao_tb_thongtintocao" ManuallyRouted="false" />
+        <AssociationConnector Association="khieunaitocaoModel.FK_tb_status_sua_xoa_donthukhieunai_tb_thongtinkhieunai" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

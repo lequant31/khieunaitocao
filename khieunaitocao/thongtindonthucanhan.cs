@@ -8,16 +8,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using DataAndSystem;
 
 namespace khieunaitocao
 {
-    public partial class thongtindonthucanhan : DevExpress.XtraEditors.XtraForm
+    public partial class Thongtindonthucanhan : DevExpress.XtraEditors.XtraForm
     {
-        public thongtindonthucanhan()
+        public Thongtindonthucanhan()
         {
             InitializeComponent();
         }
-        public string madonthu { get; set; }
+        public string Madonthu { get; set; }
         public bool bool_sua = false;
         public int id_thongtinKN;
         public int id_quatrinhgiaiquyet;
@@ -27,30 +28,30 @@ namespace khieunaitocao
         tb_thongtinkhieunai objKN;
         public int? _madonvinhan;
 
-        private void ma_donthu()
+        private void Ma_donthu()
         {
             var _stt = _khieunaitocaoContext.stt_donthukhieunai_linq();
             if (_stt == 0)
             {
-                txt_madonthu.Text = dinhdanh.kyhieu_donvi + "00" + (_stt+1);
+                txt_madonthu.Text = Dinhdanh.kyhieu_donvi + "00" + (_stt+1);
             }
             if (_stt > 0 && _stt <10)
             {
-                txt_madonthu.Text = dinhdanh.kyhieu_donvi + "00" + (_stt + 1);
+                txt_madonthu.Text = Dinhdanh.kyhieu_donvi + "00" + (_stt + 1);
             }
             if (_stt >= 10 && _stt <100)
             {
-                txt_madonthu.Text = dinhdanh.kyhieu_donvi + "0" + (_stt + 1);
+                txt_madonthu.Text = Dinhdanh.kyhieu_donvi + "0" + (_stt + 1);
             }
             if (_stt >= 100)
             {
-                txt_madonthu.Text = dinhdanh.kyhieu_donvi + "" + (_stt + 1);
+                txt_madonthu.Text = Dinhdanh.kyhieu_donvi + "" + (_stt + 1);
             }
         }
-        private void thongtindonthucanhan_Load(object sender, EventArgs e)
+        private void Thongtindonthucanhan_Load(object sender, EventArgs e)
         {
             //#region check permission
-            //if (dinhdanh.quyenhan == 2)
+            //if (Dinhdanh.quyenhan == 2)
             //{
             //    bar_chuyendonvi.Visibility == false;
             //}
@@ -70,28 +71,28 @@ namespace khieunaitocao
            
             if (bool_sua == false && bool_chuyen == false)
             {
-                txt_madonthu.Text = dinhdanh.kyhieu_donvi;
-                thongtin_addnew();
+                txt_madonthu.Text = Dinhdanh.kyhieu_donvi;
+                Thongtin_addnew();
             }
             if (bool_sua == true && bool_chuyen == false)
             {
-                thongtin_edit();
+                Thongtin_edit();
             }
             if (bool_chuyen == true)
             {
  
-                thongtin_addnew();
-                thongtin_edit();
+                Thongtin_addnew();
+                Thongtin_edit();
                 //fun_chuyen();
             }
         }
-        private void thongtin_load()
+        private void Thongtin_load()
         {
             /////////////////////////////////////////
             objKN = new tb_thongtinkhieunai();
             bool_sua = false;
             bool_chuyen = false;
-            txt_madonthu.EditValue = dinhdanh.kyhieu_donvi;
+            txt_madonthu.EditValue = Dinhdanh.kyhieu_donvi;
             memo_tomtatnoidung.EditValue = null;
             btn_dinhkem.Text = "Tài liệu đính kèm";
             rdb_canhan.SelectedIndex=0;
@@ -124,13 +125,13 @@ namespace khieunaitocao
             grc_bidon.DataSource = objKN.tb_bidons;
             grc_nhatkyguidon.DataSource = objKN.tb_nhatky_guidons;            
         }
-        private void thongtin_addnew()
+        private void Thongtin_addnew()
         {
                 objKN = new tb_thongtinkhieunai();
                 grc_bidon.DataSource = objKN.tb_bidons;
                 grc_nhatkyguidon.DataSource = objKN.tb_nhatky_guidons;
         }
-        private void thongtin_edit()
+        private void Thongtin_edit()
         {
                 var _list_thongtindonthu = _khieunaitocaoContext.xem_thongtindonthu_gopbang_linq(id_thongtinKN).SingleOrDefault();
                 txt_madonthu.Text = _list_thongtindonthu.ma_donthu_khieunai;
@@ -177,7 +178,7 @@ namespace khieunaitocao
                 grv_nhatkyguidon.RefreshData();            
                
         }
-        public void fun_chuyen()
+        public void Fun_chuyen()
         {
             try
             {
@@ -241,7 +242,7 @@ namespace khieunaitocao
             }
            
         }
-        private void rdb_canhan_EditValueChanged(object sender, EventArgs e)
+        private void Rdb_canhan_EditValueChanged(object sender, EventArgs e)
         {
            
             if (rdb_canhan.SelectedIndex==0)
@@ -258,7 +259,7 @@ namespace khieunaitocao
             }
             
         }
-        private void xtraTab_canhan_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
+        private void XtraTab_canhan_SelectedPageChanged(object sender, DevExpress.XtraTab.TabPageChangedEventArgs e)
         {
             if (xtraTab_canhan.SelectedTabPageIndex == 0)
             {
@@ -270,55 +271,55 @@ namespace khieunaitocao
             }
 
         }
-        private void com_loaidon_Enter(object sender, EventArgs e)
+        private void Com_loaidon_Enter(object sender, EventArgs e)
         {
             if(com_loaidon.Text.Trim()=="Loại đơn")
             {
                 com_loaidon.Text = "";
             }
         }
-        private void com_loaidon_Leave(object sender, EventArgs e)
+        private void Com_loaidon_Leave(object sender, EventArgs e)
         {
             if (com_loaidon.Text.Trim() == "")
             {
                 com_loaidon.Text = "Loại đơn";
             }
         }
-        private void com_lydokhongdudkxl_Leave(object sender, EventArgs e)
+        private void Com_lydokhongdudkxl_Leave(object sender, EventArgs e)
         {
             if (com_lydokhongdudkxl.Text.Trim() == "")
             {
                 com_lydokhongdudkxl.Text = "Lý do không đủ ĐKXL";
             }
         }
-        private void com_lydokhongdudkxl_Enter(object sender, EventArgs e)
+        private void Com_lydokhongdudkxl_Enter(object sender, EventArgs e)
         {
             if (com_lydokhongdudkxl.Text.Trim() == "Lý do không đủ ĐKXL")
             {
                 com_lydokhongdudkxl.Text = "";
             }
         }
-        private void btn_dinhkem_Leave(object sender, EventArgs e)
+        private void Btn_dinhkem_Leave(object sender, EventArgs e)
         {
             if (btn_dinhkem.Text.Trim() == "")
             {
                 btn_dinhkem.Text = "Tài liệu đính kèm";
             }
         }
-        private void btn_dinhkem_Enter(object sender, EventArgs e)
+        private void Btn_dinhkem_Enter(object sender, EventArgs e)
         {
             if (btn_dinhkem.Text.Trim() == "Tài liệu đính kèm")
             {
                 btn_dinhkem.Text = "";
             }
         }
-        private void bar_btn_save_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_btn_save_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             try
             {
                 #region kiemtra
                
-                if (dinhdanh.quyenhan == 2)
+                if (Dinhdanh.quyenhan == 2)
                 {
                     XtraMessageBox.Show("Tài khoản chỉ có quyền xem.\n Không được thay đổi");
                     return;
@@ -350,7 +351,7 @@ namespace khieunaitocao
                 if(bool_sua == false)
                 {
                     //var _lst = _khieunaitocaoContext.tb_thongtinkhieunais.Where(p => p.ma_donthu_khieunai == txt_madonthu.Text.Trim()).FirstOrDefault();
-                    int _lst = _khieunaitocaoContext.check_madonthu_linq(dinhdanh.madonvi, txt_madonthu.Text.Trim());
+                    int _lst = _khieunaitocaoContext.check_madonthu_linq(Dinhdanh.madonvi, txt_madonthu.Text.Trim());
                     if (_lst == 1)
                     {
                         XtraMessageBox.Show("Mã đơn thư khiếu nại đã tồn tại");
@@ -380,11 +381,11 @@ namespace khieunaitocao
                 //}
                 //else
                 //{
-                //    objKN.ma_donvi = dinhdanh.madonvi;
+                //    objKN.ma_donvi = Dinhdanh.madonvi;
                 //}
-                objKN.ma_donvi_nhapdulieu = dinhdanh.madonvi;
+                objKN.ma_donvi_nhapdulieu = Dinhdanh.madonvi;
                 objKN.ma_donthu_khieunai = txt_madonthu.Text;
-                objKN.ma_canbo_nhapdulieu = dinhdanh.ma_canbo;                             
+                objKN.ma_canbo_nhapdulieu = Dinhdanh.ma_canbo;                             
                 objKN.tochuc_canhan = Convert.ToInt32(rdb_canhan.EditValue);
                 objKN.nacdanh_codanh = Convert.ToInt32(radioGroup_hinhthuc.EditValue);
                 objKN.chuky_nhieunguoi_motnguoi = Convert.ToInt32(rdb_chuky.EditValue);
@@ -459,7 +460,7 @@ namespace khieunaitocao
             }
           
         }
-        private void grv_bidon_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
+        private void Grv_bidon_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
         {
             //var bidon_tochuc_canhan = grv_bidon.GetRowCellValue(e.RowHandle,"bidon_tochuc_canhan").ToString().Trim();
             //var hoten_canhan = grv_bidon.GetRowCellValue(e.RowHandle, "hoten_canhan").ToString().Trim();
@@ -487,7 +488,7 @@ namespace khieunaitocao
             //    //_khieunaitocaoEntities.them_bidon(txt_madonthu,grv_bidon.GetRowCellValue(e.RowHandle,grv_bidon.Columns[1]).ToString());
             //}
         }
-        private void grv_bidon_KeyUp(object sender, KeyEventArgs e)
+        private void Grv_bidon_KeyUp(object sender, KeyEventArgs e)
         {
             if(e.KeyCode == Keys.Delete && e.Modifiers == Keys.Control)
             {
@@ -497,32 +498,32 @@ namespace khieunaitocao
                 grv_bidon.DeleteRow(grv_bidon.FocusedRowHandle);
             }
         }
-        private void repository_btn_xoa_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private void Repository_btn_xoa_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn xóa thông tin?", "Confirmation", MessageBoxButtons.YesNo) !=
                   DialogResult.Yes)
                 return;
             grv_bidon.DeleteSelectedRows();
         }
-        private void repositoryItem_capbac_EditValueChanged(object sender, EventArgs e)
+        private void RepositoryItem_capbac_EditValueChanged(object sender, EventArgs e)
         {
             grv_bidon.SetFocusedRowCellValue("capbac", ((ComboBoxEdit)sender).EditValue);
         }
-        private void repository_btn_xoa_nhatky_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        private void Repository_btn_xoa_nhatky_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             if (MessageBox.Show("Bạn có muốn xóa thông tin?", "Confirmation", MessageBoxButtons.YesNo) !=
                 DialogResult.Yes)
                 return;
             grv_nhatkyguidon.DeleteSelectedRows();
         }
-        private void bar_btn_lammoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_btn_lammoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            thongtin_load();
+            Thongtin_load();
         }
-        private void bar_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_xoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             #region check permission
-            if (dinhdanh.quyenhan == 2)
+            if (Dinhdanh.quyenhan == 2)
             {
                 XtraMessageBox.Show("Tài khoản chỉ có quyền xem.\n Không được phép xóa");
                 return;
@@ -556,10 +557,10 @@ namespace khieunaitocao
                 throw;
             }
         }
-        private void bar_chuyendonvi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        private void Bar_chuyendonvi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             #region check permission
-            if (dinhdanh.quyenhan == 2)
+            if (Dinhdanh.quyenhan == 2)
             {
                 XtraMessageBox.Show("Bạn không có quyền này");
                 return;
@@ -568,7 +569,7 @@ namespace khieunaitocao
             bool_sua = false;
             bool_chuyen = false;
             objKN.ma_donthu_khieunai = txt_madonthu.Text;
-            objKN.ma_canbo_nhapdulieu = dinhdanh.ma_canbo;
+            objKN.ma_canbo_nhapdulieu = Dinhdanh.ma_canbo;
             objKN.ma_donvi_nhapdulieu = _madonvinhan;
             objKN.tochuc_canhan = Convert.ToInt32(rdb_canhan.EditValue);
             objKN.nacdanh_codanh = Convert.ToInt32(radioGroup_hinhthuc.EditValue);
